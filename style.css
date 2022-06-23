@@ -15,6 +15,7 @@ body{
 #vid{
     height: 100vh;
     width: 100%;
+    background-size: cover;
 }
 
 .taskbar{
@@ -32,22 +33,44 @@ body{
     justify-content: center;
 }
 
-.startmenu,.google{
+.startmenu{
     position: absolute;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     bottom: -655px;
     width: 100%;
-    text-align: center;
     transition: all 0.3s ease-in; 
+}
+
+.window{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 90%;
+    width: 95%;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: #5c5c5c;
+    z-index: 200;
+    border-radius: 8px;
+    visibility: hidden;
+}
+
+span{
+    background-color: rgb(252, 54, 54);
+    color: antiquewhite;
+    padding-left:16px;
+    padding-right: 16px;
+    float:right;
+    cursor: pointer;
 }
 
 .panel{
     min-height: 80vh;
     width: 40%;
     padding: 30px;
-    display: flex;
         backdrop-filter: blur(6px) saturate(59%);
         -webkit-backdrop-filter: blur(6px) saturate(59%);
         background-color: rgba(255, 255, 255, 0.44);
@@ -55,8 +78,34 @@ body{
         border: 1px solid rgba(209, 213, 219, 0.3);
         margin-bottom: 10px;
         z-index: 1000;
-        align-items: flex-start;
-        justify-content: space-evenly;
+}
+
+.apps{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+hr{
+    backdrop-filter: blur(6px) saturate(59%);
+        -webkit-backdrop-filter: blur(6px) saturate(59%);
+        background-color: rgba(255, 255, 255, 0.44);
+        border-radius: 12px;
+        border: 1px solid rgba(30, 39, 53, 0.3);
+        margin-top: 10px;
+        margin-bottom: 10px;
+}
+
+.panel p{
+    color: rgb(21, 26, 49);
+    font-size: medium;
+    font-weight: bold;
+}
+.panel span {
+    color: rgb(21,26,49);
+    font-size: large;
+    font-weight: bold;
 }
 
 .right{
@@ -66,7 +115,24 @@ body{
     margin-right: 6px;
     padding: 10px;
 }  
+
+.desktopicon{
+    margin: 8px;
+    text-align: center;
+    height: auto;
+    width: 80px;
+    padding: 4px;
+    position: absolute;
+    background-color: transparent;
+}
+
+.desktopicon p{
+    text-decoration: none;
+    color: #000;
+}
+
 .icon{
+    text-align: center;
     height: auto;
     width: auto;
     backdrop-filter: blur(6px) saturate(59%);
@@ -77,3 +143,49 @@ body{
         margin-left:2px;
         margin-right: 2px;
 }
+
+.notes{
+    position: absolute;
+    right: 0;
+    background-color: #f1e292;
+    max-width: 300px;
+    height: auto;
+    margin: 8px;
+    border-radius: 8px;
+    z-index: 100;
+    box-shadow: 2px #b1a76d;
+    align-items: center;
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+.notes #title{
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: large;
+    color: antiquewhite;
+    background-color: #fcbd35;
+    padding:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+.notes #note{
+    font-family: 'Permanent Marker', cursive;
+    font-size: medium;
+    color: #ffae00;
+    text-decoration: dotted;
+    text-decoration-color: #f5af17;
+}
+
+.notes a{
+    font-family: 'Permanent Marker', cursive;
+    text-decoration: none;
+    color: #ffae00;
+}
+
+.notes img{
+    border-radius: 20px;
+}
+

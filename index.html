@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Try Windows 11</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Rajdip mondal - portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 <body>
-    <!-- <div class="icons">
-        <img src="chromeicon.png" width="74px" alt="">
-        <div>Google Chrome</div>
-    </div> -->
+    <div class="desktopicon">
+        <a href="https://www.google.com" download><img src="pdf.png" height="72px" width="70px" /></a>
+        <p>Rajdip Mondal - resume</p>
+    </div>    
+    <div class="notes">
+        <p id="title">Attention Visitors</p>
+        <p id="note">I am so happy to see you here, browsing through my portfolio site and find about me. I hope you have a good experience throughout the site. Now let's move a step closer of knowing each other. Below provided are some of the oprions by which we can connect for future opportunities. Please feel free to drop any queries, suggestions or messages you might have in your mind.</p>
+        <img src="mail.png" height="24px" width="24px" /><a href="mailto:mondalrajdip2014@gmail.com">mondalrajdip2014@gmail.com</a>
+        <br>
+        <img src="ph.png" height="24px" width="24px" /><a>+91 9775619952</a>
+        <br>
+        <img src="addr.png" height="24px" width="24px" /><a>Kolkata,India</a>
+    </div>
     <div class="taskbar">
-        <!-- <img src="icons.PNG" alt="">
-        <img class="right" src="taskbarright.PNG" alt=""> -->
-        <div class="icon" id="st"><img src="startmenu.PNG" height="35px" width="35px" style="margin: 8px;"/></div>
-        <div class="icon" id="ch"><img src="chromeicon.png" height="35px" width="35px" style="margin: 8px;" /></div>
-        <div class="icon"><img src="github.png" height="35px" width="35px" style="margin: 8px;" /></div>
+        <div class="icon"><img src="startmenu.PNG" height="35px" width="35px" style="margin: 8px;"/></div>
+        <button class="icon" onclick="showedge()"><img src="edgeicon.png" height="35px" width="35px" style="margin: 8px;" /></button>
+        <button class="icon" onclick="showchrome()"><img src="chromeicon.png" height="35px" width="35px" style="margin: 8px;" /></button>
+        <button class="icon" onclick="showgithub()"><img src="github.png" height="35px" width="35px" style="margin: 8px;" /></button>
         <div class="right">
         <p id="time"></p>
         <p id="date"></p>
@@ -25,17 +32,54 @@
     </div>
     <div class="startmenu">
         <div class="panel">
-            <div class="icon"><img src="startmenu.PNG" height="35px" width="35px" style="margin: 8px;" /></div>
-            <div class="icon"><img src="chromeicon.png" height="35px" width="35px" style="margin: 8px;" /></div>
-            <div class="icon"><img src="github.png" height="35px" width="35px" style="margin: 8px;" /></div>
+            <p>Apps to get connected</p>
+            <hr>
+
+            <div class="apps"> 
+                <div class="icon"><img src="github.png" height="35px" width="35px" style="margin: 8px;" title="https://github.com/raj2852" /><p>Github</p></div>
+                <div class="icon"><img src="linkedin.png" height="35px" width="35px" style="margin: 8px;" title=""/><p>Linked-In</p></div>
+                <div class="icon"><img src="fb.png" height="35px" width="35px" style="margin: 8px;" title=""/><p>Facebook</p></div>
+                <div class="icon"><img src="twitter.png" height="35px" width="35px" style="margin: 8px;" title="" /><p>Twitter</p></div>
+                <div class="icon"><img src="insta.png" height="35px" width="35px" style="margin: 8px;" title=""/><p>Instagram</p></div>
+                <div class="icon"><img src="rmd.png" height="35px" width="35px" style="margin: 8px;" title=""/><p>Portfolio Site</p></div>
+            </div>
+
+            <p>Quick Links</p>
+            <hr>
+            <div class="links">
+                <img src="tastebuds.png" width="50%" height="50%" />
+                <span>Tastebuds</span>
+                <img src="mediheal.png" width="50%" height="50%" />
+                <span>Mediheal</span>
+                <img src="safar.png" width="50%" height="50%" />
+                <span>Safar</span>
+            </div>
         </div>
     </div>
-    <div class="google">
-        <div class="panel"><p>This is chrome</p></div>
+    <div class="window" id="chrome">
+        <div style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;">
+            <img src="chromeicon.png" height="24px" width="24px" style="padding: 2px;"/>
+            Google Chrome
+            <span onclick="closechrome()">X</span>
+            <span  style="background-color: transparent;" onclick="maxminch()">□</span>
+        </div>
+        <iframe src="https://www.google.com" title="Chrome browser" height="100%" width="100%"></iframe>
+    </div>
+    <div class="window" id="edge" style="right: 0;">
+        <div
+            style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;">
+            <img src="edgeicon.png" height="24px" width="24px" style="padding: 2px;" />
+            Edge
+            <span onclick="closeedge()">X</span>
+            <span style="background-color: transparent;">□</span>
+        </div>
+        <iframe src="https://www.bing.com" title="Chrome browser" height="100%" width="100%" id="bing"></iframe>
     </div>
     <video autoplay muted id="vid">
         <source src="bg.webm" type="video/webm">
     </video>
 </body>
-<script src="script.js"></script>
+<script src="startmenu.js"></script>
+<script src="window.js"></script>
+
 </html>
