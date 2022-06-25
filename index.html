@@ -1,84 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Meta viewport tag to add responsiveness to site-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Rajdip mondal - portfolio</title>
+    <!--Linking external stylesheet and favicon to site-->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
 </head>
-<body>
-    <div class="desktopicon">
-        <a href="https://www.google.com" download><img src="pdf.png" height="72px" width="70px" /></a>
-        <p>Rajdip Mondal - resume</p>
-    </div>    
+<!--Script to redirect code to display only portfolio in case of small screens-->
+<script type="text/javascript">
+    if (screen.width <= 800) {
+        document.location = "https://raj2852.github.io/portfolio";
+    }
+</script>
+<body> 
+    <!--Section for desktop icons-->
+    <button class="desktop" onclick="showresume()" style="margin-left: 15px;
+    margin-top: 2%;">
+        <img src="./images/pdf.png" height="72px" width="70px" />
+        <p>Resume</p>
+    </button>
+    <br>
+    <button onclick="showexplorer()" class="desktop" style="margin-left: 15px;
+    margin-top: 10%;">
+        <img src="./images/folder.png" height="72px" width="70px" />
+        <p>More about me</p>
+    </button>
+
+    <!--Section for sticky note with personal message-->
     <div class="notes">
         <p id="title">Attention Visitors</p>
-        <p id="note">I am so happy to see you here, browsing through my portfolio site and find about me. I hope you have a good experience throughout the site. Now let's move a step closer of knowing each other. Below provided are some of the oprions by which we can connect for future opportunities. Please feel free to drop any queries, suggestions or messages you might have in your mind.</p>
-        <img src="mail.png" height="24px" width="24px" /><a href="mailto:mondalrajdip2014@gmail.com">mondalrajdip2014@gmail.com</a>
+        <p id="note">I am so happy to see you here, browsing through my portfolio site and finding about me. I hope you have a good experience throughout the site. Now let's move a step closer of knowing each other. Below provided are some of the options by which we can connect for future opportunities. Please feel free to drop any queries, suggestions or messages you might have in your mind....
         <br>
-        <img src="ph.png" height="24px" width="24px" /><a>+91 9775619952</a>
+        <a href="mailto:mondalrajdip2014@gmail.com">Email: mondalrajdip2014@gmail.com</a>
         <br>
-        <img src="addr.png" height="24px" width="24px" /><a>Kolkata,India</a>
+        <a href="tel:+91 9775619952">SMS: +91 9775619952</a>
+        <br>
+        <a href="https://www.google.com/maps/place/Kolkata,+West+Bengal/@22.6763858,88.0495275,10z/data=!4m13!1m7!3m6!1s0x39f882db4908f667:0x43e330e68f6c2cbc!2sKolkata,+West+Bengal!3b1!8m2!3d22.572646!4d88.363895!3m4!1s0x39f882db4908f667:0x43e330e68f6c2cbc!8m2!3d22.572646!4d88.363895" target="_blank">Location: Kolkata,India</a>
+        </p>
     </div>
+
+    <!--Section for taskbar and the icons-->
     <div class="taskbar">
-        <div class="icon"><img src="startmenu.PNG" height="35px" width="35px" style="margin: 8px;"/></div>
-        <button class="icon" onclick="showedge()"><img src="edgeicon.png" height="35px" width="35px" style="margin: 8px;" /></button>
-        <button class="icon" onclick="showchrome()"><img src="chromeicon.png" height="35px" width="35px" style="margin: 8px;" /></button>
-        <button class="icon" onclick="showgithub()"><img src="github.png" height="35px" width="35px" style="margin: 8px;" /></button>
+        <!--Start menu-->
+        <div class="icon">
+            <img src="./images/startmenu.PNG" height="35px" width="35px" style="margin: 8px;"/>
+        </div>
+        
+        <!--other icons-->
+        <button class="icon" onclick="showexplorer()">
+            <img src="./images/explorer.png" height="35px" width="35px" style="margin: 8px;" />
+        </button>
+
+        <button class="icon" onclick="showedge()">
+            <img src="./images/edgeicon.png" height="35px" width="35px" style="margin: 8px;" />
+        </button>
+
+        <button class="icon" onclick="showportfolio()">
+            <img src="./images/rmd.png" height="35px" width="35px" style="margin: 8px;" />
+        </button>
+
+        <!--Client date and time section in taskbar-->
         <div class="right">
-        <p id="time"></p>
-        <p id="date"></p>
+            <p id="time"></p>
+            <p id="date"></p>
         </div>
     </div>
+
+    <!--Section for the different windows-->
+    <!--Start menu window-->
     <div class="startmenu">
         <div class="panel">
             <p>Apps to get connected</p>
             <hr>
 
             <div class="apps"> 
-                <div class="icon"><img src="github.png" height="35px" width="35px" style="margin: 8px;" title="https://github.com/raj2852" /><p>Github</p></div>
-                <div class="icon"><img src="linkedin.png" height="35px" width="35px" style="margin: 8px;" title=""/><p>Linked-In</p></div>
-                <div class="icon"><img src="fb.png" height="35px" width="35px" style="margin: 8px;" title=""/><p>Facebook</p></div>
-                <div class="icon"><img src="twitter.png" height="35px" width="35px" style="margin: 8px;" title="" /><p>Twitter</p></div>
-                <div class="icon"><img src="insta.png" height="35px" width="35px" style="margin: 8px;" title=""/><p>Instagram</p></div>
-                <div class="icon"><img src="rmd.png" height="35px" width="35px" style="margin: 8px;" title=""/><p>Portfolio Site</p></div>
+                <!--github icon-->
+                <a href="https://github.com/raj2852" target="_blank">
+                    <div class="icon">
+                    <img src="./images/github.png" height="35px" width="35px" style="margin: 8px;" title="https://github.com/raj2852" />
+                    <p>Github</p>
+                    </div>
+                </a>
+
+                <!--Linkedin icon-->
+                <a href="https://www.linkedin.com/in/rajdip-mondal" target="_blank">
+                    <div class="icon">
+                        <img src="./images/linkedin.png" height="35px" width="35px" style="margin: 8px;" title="https://www.linkedin.com/in/rajdip-mondal" />
+                        <p>Linked-In</p>
+                    </div>
+                </a>
+
+                <!--facebook icon-->
+                <a href="https://www.facebook.com/rajdip.mondal.1297943" target="_blank">
+                    <div class="icon">
+                        <img src="./images/fb.png" height="35px" width="35px" style="margin: 8px;" title="https://www.facebook.com/rajdip.mondal.1297943" />
+                        <p>Facebook</p>
+                    </div>
+                </a>
+                
+                <!--Twitter icon-->
+                <a href="https://twitter.com/RajdipAm?s=08" target="_blank">
+                    <div class="icon">
+                        <img src="./images/twitter.png" height="35px" width="35px" style="margin: 8px;" title="https://twitter.com/RajdipAm?s=08" />
+                        <p>Twitter</p>
+                    </div>
+                </a>
+                
+                <!--instagram icon-->
+                <a href="https://www.instagram.com/rajdip.2852/?hl=en" target="_blank">
+                    <div class="icon">
+                        <img src="./images/insta.png" height="35px" width="35px" style="margin: 8px;" title="https://www.instagram.com/rajdip.2852/?hl=en" />
+                        <p>Instagram</p>
+                    </div>
+                </a>
+                
+
+                <!--youtube icon-->
+                <a href="https://www.youtube.com/channel/UCsSu6N72arSxHwUFLt5c70w?view_as=subscriber" target="_blank">
+                    <div class="icon">
+                        <img src="./images/yt.png" height="35px" width="35px" style="margin: 8px;" title="https://www.youtube.com/channel/UCsSu6N72arSxHwUFLt5c70w?view_as=subscriber" />
+                        <p>Youtube</p>
+                    </div>
+                </a>
             </div>
 
+            <!--section of start menu to find my projects-->
             <p>Quick Links</p>
             <hr>
             <div class="links">
-                <img src="tastebuds.png" width="50%" height="50%" />
-                <span>Tastebuds</span>
-                <img src="mediheal.png" width="50%" height="50%" />
-                <span>Mediheal</span>
-                <img src="safar.png" width="50%" height="50%" />
-                <span>Safar</span>
+                <a href="https://tastebuds-in.herokuapp.com" target="_blank">
+                    <img src="./images/tastebuds.png" width="50%" height="50%" />
+                    <span>Tastebuds</span>
+                </a>
+                <a href="https://raj2852.github.io/Mediheal" target="_blank">
+                    <img src="./images/mediheal.png" width="50%" height="50%" />
+                    <span>Mediheal</span>
+                </a>
+                <a href="https://raj2852.github.io/safar" target="_blank">
+                    <img src="./images/safar.png" width="50%" height="50%" />
+                    <span>Safar</span>
+                </a>
             </div>
         </div>
     </div>
-    <div class="window" id="chrome">
+
+    <!--Pdf viewer window-->
+    <div class="window" id="pdf">
         <div style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;">
-            <img src="chromeicon.png" height="24px" width="24px" style="padding: 2px;"/>
-            Google Chrome
-            <span onclick="closechrome()">X</span>
-            <span  style="background-color: transparent;" onclick="maxminch()">□</span>
+            <img src="./images/pdf.png" height="24px" width="24px" style="padding: 2px;"/>
+            PDF Viewer
+            <span onclick="closeresume()">X</span>
         </div>
-        <iframe src="https://www.google.com" title="Chrome browser" height="100%" width="100%"></iframe>
+        <iframe src="./RAJDIP MONDAL-resume.pdf" title="Pdf Viewer" height="100%" width="100%"></iframe>
     </div>
+
+    <!--Edge browser window-->
     <div class="window" id="edge" style="right: 0;">
         <div
             style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;">
-            <img src="edgeicon.png" height="24px" width="24px" style="padding: 2px;" />
+            <img src="./images/edgeicon.png" height="24px" width="24px" style="padding: 2px;" />
             Edge
             <span onclick="closeedge()">X</span>
-            <span style="background-color: transparent;">□</span>
         </div>
-        <iframe src="https://www.bing.com" title="Chrome browser" height="100%" width="100%" id="bing"></iframe>
+        <iframe src="https://www.bing.com" title="Edge browser" height="100%" width="100%"></iframe>
     </div>
+
+    <!--File Explorer window-->
+    <div class="window" id="explorer" style="background-color: aliceblue;">
+        <div
+            style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;">
+            <img src="./images/explorer.png" height="24px" width="24px" style="padding: 2px;" />
+            File Explorer
+            <span onclick="closeexplorer()">X</span>
+        </div>
+        <!--folders inside-->
+        <div class="explorer" >
+            <button onclick="showcerti()" class="folder">
+                <img src="./images/folder.png" style="max-width: 30%;position: relative;float: left;">
+                <p style="float: right;align-self: center;">Specializations and certificates</p>
+            </button>
+            <button onclick="showedu()" class="folder">
+                <img src="./images/txt.png" style="max-width: 30%;position: relative;float: left;align-self: center;margin-right: 10px;">
+                <p style="float: right;align-self: center;">Education</p>
+            </button>
+            <button onclick="showexp()" class="folder">
+                <img src="./images/txt.png" style="max-width: 30%;position: relative;float: left;align-self: center;margin-right: 10px;">
+                <p style="float: right;align-self: center;">Experience</p>
+            </button>
+        </div>
+        <!--files under folder-->
+        <div class="files" id="files">
+            <span onclick="closecerti()" style="float: left;background-color: transparent;color: rgb(93, 93, 247);font-size: 48px;">←</span>
+            <br>
+            <br>
+            <a href="./images/responsive web design and development.png" style="margin-left: 15px;
+            margin-top: 2%;background-color: transparent;border-width: 0 !important;outline:none !important" onclick="showpic()" target="imgbox">
+                <img src="./images/responsive web design and development.png" height="72px" width="100px" />
+                <p>Reponsive web design and development specialization</p>
+            </a>
+            <a href="./images/web design for everybody.png" style="margin-left: 15px;
+            margin-top: 2%;background-color: transparent;border-width: 0 !important;outline:none !important"
+            onclick="showpic()" target="imgbox">
+                <img src="./images/web design for everybody.png" height="72px" width="100px" />
+                <p>Web design for everybody specialization</p>
+            </a>
+            <a href="./images/web applications for everybody.png" style="margin-left: 15px;
+            margin-top: 2%;background-color: transparent;border-width: 0 !important;outline:none !important"
+            onclick="showpic()" target="imgbox">
+                <img src="./images/web applications for everybody.png" height="72px" width="100px" />
+                <p>Web applications for everybody specialization</p>
+            </a>
+            <a href="./images/ui ux design.png" style="margin-left: 15px;
+            margin-top: 2%;background-color: transparent;border-width: 0 !important;outline:none !important"
+            onclick="showpic()" target="imgbox">
+                <img src="./images/ui ux design.png" height="72px" width="100px" />
+                <p>UI/UX design specialization</p>
+            </a>
+            <a href="./images/Internet of things .png" style="margin-left: 15px;
+            margin-top: 2%;background-color: transparent;border-width: 0 !important;outline:none !important"
+            onclick="showpic()" target="imgbox">
+                <img src="./images/Internet of things .png" height="72px" width="100px" />
+                <p>Internet of things specialization</p>
+            </a>
+            <a href="./images/business english.png" style="margin-left: 15px;
+            margin-top: 2%;background-color: transparent;border-width: 0 !important;outline:none !important"
+            onclick="showpic()" target="imgbox">
+                <img src="./images/business english.png" height="72px" width="100px" />
+                <p>Business English communication specialization</p>
+            </a>
+            <a href="./images/engish communication skills.png" style="margin-left: 15px;
+            margin-top: 2%;background-color: transparent;border-width: 0 !important;outline:none !important"
+            onclick="showpic()" target="imgbox">
+                <img src="./images/engish communication skills.png" height="72px" width="100px" />
+                <p>English communication skills specialization</p>
+            </a>
+        </div>
+    </div>
+
+    <!--image viewer window-->
+    <div class="window" id="pic" style="right: 10;background-color: #5c5c5c;">
+        <div
+            style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;">
+            <img src="./images/photo.png" height="24px" width="24px" style="padding: 2px;" />
+            Photo viewer
+            <span onclick="closepic()">X</span>
+        </div>
+        <div style="height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;">
+        <iframe name="imgbox" id="imgbox" src="" height="100%" width="100%"></iframe>
+        </div>
+    </div>
+
+    <!--portfolio window-->
+    <div class="window" id="profile">
+        <div
+            style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;">
+            <img src="./images/rmd.png" height="24px" width="24px" style="padding: 2px;" />
+            Portfolio Site
+            <span onclick="closeportfolio()">X</span>
+        </div>
+        <iframe src="https://raj2852.github.io/portfolio" title="Portfolio" height="100%" width="100%"></iframe>
+    </div>
+
+    <!--notepad window-->
+    <div class="window" id="edu">
+        <div
+            style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;">
+            <img src="./images/txt.png" height="24px" width="24px" style="padding: 2px;" />
+            Education Details
+            <span onclick="closeedu()">X</span>
+        </div>
+            <div style="background-color: aliceblue;padding: 20px;">
+                <div style="padding: 10px;box-sizing:border-box;border-style:solid;border-width:4px;border-color: rgb(1, 1, 97);color: rgb(39, 2, 2);width: 100%;text-align: left;font-size: larger;">
+                    <p style="text-align:center;font-size: xx-large;color:rgb(0, 145, 89)">My Education details</p>
+                    <br>
+                    <br>
+                    <p>Hello reader! I am Rajdip Mondal. I hail from Durgapur, a city in West Bengal, India which is famous for its industrial belt, the icon of which is the Durgapur Steel Plant(DSP) - famous world wide for its steel production power and the most widely traded finished product, wheels for the Indian Railways.</p>
+                    <p>I have done my schooling (both standard X and standard XII) from the best school of the city: D.A.V Model School, Durgapur. D.A.V chain of schools are famous world wide for their excellence in education and laboratory infrastructure.</p>
+                    <p>I am currently pursueing my Bachelor of Technology undergraduate degree in the field of Computer Science and Engineering from Techno India Group, Kolkata which in accredited by AICTE and affliated to MAKAUT university, West Bengal.</p>
+                    <p>Below are some stats throughout my academic career: </p>
+                    <br>
+                    <p><strong>AISSCE(10th Board) - 2016</strong> : Scored a <strong>perfect CGPA 10</strong> in the CBSE Board exam and was <strong>felicitated and medalled by Dainik Jagaran</strong>, an esteemed newspaper cycle of the country.</p>
+                    <br>
+                    <p><strong>SSE(12th Board) - 2018</strong> : Scored <strong>85.8%</strong> in my class 12 standard CBSE board exam. My field of study was Science with Physics,Maths,Biology and Chemistry. </p>
+                    <br>
+                    <p><strong>Graduation - 2019 to present (expected year of passing 2023)</strong> : my major for this program is <strong>Computer Science and Engineering</strong>. My current CGPA is <strong>9.31 (upto 5th semester) .</strong></p>
+                </div>
+            </div>
+    </div>
+
+    <!--window for experience-->
+    <div class="window" id="exp" >
+        <div
+            style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;">
+            <img src="./images/txt.png" height="24px" width="24px" style="padding: 2px;" />
+            Experience Details
+            <span onclick="closeexp()">X</span>
+        </div>
+        <div style="background-color: aliceblue;padding: 20px;">
+            <div
+                style="padding: 10px;box-sizing:border-box;border-style:solid;border-width:4px;border-color: rgb(1, 1, 97);color: rgb(39, 2, 2);width: 100%;text-align: left;font-size: larger;">
+                    <p style="text-align:center;font-size: xx-large;color:rgb(0, 145, 89)">My Experiences</p>
+                    <br>
+                    <br>
+                    <p><strong>Junior Technical Staff(Intern) at Trigital Technologies Private Limited - March 2022 - Present</strong> : </p>
+                    <p>Trigital Technologies is a Hyderabad based firm where I interned as a junior technical staff and the main responsibility was to work with a team of brilliant and super enthusiastic people on technologies like <b>React Native, Android app development, various apk integration and presentation with clients</b>. I have already worked on apps of some very famous brands in the Indian television and broadband industry, including apps that support LCOs and customers.<b>Added multiple features in two FOS - field operation apps for
+                    Cable operation business houses, namely, Fastway and BRIPL</b>. Worked for one of India's <b>leading MSOs (multi-service operator) supporting a 5 Million customer base operated by 5000 operators</b>. Currently our team is working on a project based on <b>taxation system to be implemented by Lagos State Internal Revenue Service.</b></p>
+                    <br>
+                    <p><strong>Internshala Student Partner(ISP 17) - March 2020 to May 2020</strong> : </p>
+                    <p>The Internshala Student Partner program was a <b>college ambassador</b> event where I was selected to represent my college on the Internshala platform. The main task was to spread awareness about the platform as Internshala is a widely renowned platform for internships and career upskilling courses. During the three months event, I <b>conducted multiple online sessions</b> with my college batch mates and helped them identify the true potential of the site. <b>About 85% students registered on the platform and many took online courses</b>. As an ISP, I also provided them many certificates for attending the sessions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--wallpaper animation background-->
     <video autoplay muted id="vid">
         <source src="bg.webm" type="video/webm">
     </video>
 </body>
+
 <script src="startmenu.js"></script>
 <script src="window.js"></script>
 

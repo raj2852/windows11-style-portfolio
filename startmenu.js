@@ -1,3 +1,4 @@
+///////////////////////////////script to open and close start menu//////////////////////////////
 let start = document.getElementsByClassName("icon")[0]
 let startmenu = document.getElementsByClassName("startmenu")[0]
 
