@@ -31,11 +31,11 @@
     <!--Section for sticky note with personal message-->
     <div class="notes">
         <p id="title">Attention Visitors</p>
-        <p id="note">I am so happy to see you here, browsing through my portfolio site and finding about me. I hope you have a good experience throughout the site. Now let's move a step closer of knowing each other. Below provided are some of the options by which we can connect for future opportunities. Please feel free to drop any queries, suggestions or messages you might have in your mind....
+        <p id="note"><image src="./images/bg.png" height="70px" width="70px" style="border-width: 2;margin-top: -45px;border-radius: 25;margin-left: -10px;">I am so happy to see you here, browsing through my portfolio site and finding about me. I hope you have a good experience throughout the site. Now let's move a step closer of knowing each other. Below provided are some of the modes by which we can connect for future opportunities. Please feel free to drop any queries, suggestions or messages you might have in your mind....
         <br>
         <a href="mailto:mondalrajdip2014@gmail.com">Email: mondalrajdip2014@gmail.com</a>
         <br>
-        <a href="tel:+91 9775619952">SMS: +91 9775619952</a>
+        <a href="tel:+91 9775619952">Phone: +91 9775619952</a>
         <br>
         <a href="https://www.google.com/maps/place/Kolkata,+West+Bengal/@22.6763858,88.0495275,10z/data=!4m13!1m7!3m6!1s0x39f882db4908f667:0x43e330e68f6c2cbc!2sKolkata,+West+Bengal!3b1!8m2!3d22.572646!4d88.363895!3m4!1s0x39f882db4908f667:0x43e330e68f6c2cbc!8m2!3d22.572646!4d88.363895" target="_blank">Location: Kolkata,India</a>
         </p>
@@ -159,12 +159,14 @@
     <!--Edge browser window-->
     <div class="window" id="edge" style="right: 0;">
         <div
-            style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;">
+            style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;display:flex;justify-content: space-between;">
+            <div>
             <img src="./images/edgeicon.png" height="24px" width="24px" style="padding: 2px;" />
-            Edge
+            Edge</div>
+            <a href="https://www.bing.com" target="edge" style="text-decoration: none;color: black;align-self: center;box-sizing: border-box;border-width: 1px;border-style: solid;border-color: black;"><img src="./images/home.png" height="30px" width="30px" style="margin-left: 5px;" />Home</a>
             <span onclick="closeedge()">X</span>
         </div>
-        <iframe src="https://www.bing.com" title="Edge browser" height="100%" width="100%"></iframe>
+        <iframe src="https://www.bing.com" title="Edge browser" name="edge" height="100%" width="100%"></iframe>
     </div>
 
     <!--File Explorer window-->
@@ -253,14 +255,14 @@
     </div>
 
     <!--portfolio window-->
-    <div class="window" id="profile">
+    <div class="window" id="profile" style="width: 771px;">
         <div
             style="background-color: #b3b3b3;font-size: larger;color:#fff;padding-left: 10px;border-top-left-radius: 8px;border-top-right-radius: 8px;">
             <img src="./images/rmd.png" height="24px" width="24px" style="padding: 2px;" />
             Portfolio Site
             <span onclick="closeportfolio()">X</span>
         </div>
-        <iframe src="https://raj2852.github.io/portfolio" title="Portfolio" height="100%" width="100%"></iframe>
+        <iframe src="/portfolio/index.html" title="Portfolio" height="100%" width="771px"></iframe>
     </div>
 
     <!--notepad window-->

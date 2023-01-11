@@ -1,0 +1,386 @@
+body{
+	padding: 0;
+	margin: 0;
+	/*background: #fffaf4;*/
+}
+#canvas{
+	position: fixed;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	overflow:hidden;
+	width: 100%;
+	height:100%;
+	padding:0;
+	margin:0;
+}
+#main-site{
+	padding: 0;
+	margin: 0;
+	background: #fffaf4;
+}
+html{
+	scroll-behavior: smooth;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+a:visited{
+	text-decoration: none;
+}
+.img-fluid{
+	display: flex;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+.social-links{
+	text-align: center;
+}
+#header{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 300px;
+	transition: all ease-in-out 0.5s;
+	z-index: 9997;
+	transition: all 0.5s;
+	padding: 0 15px;
+	background: #040b14;
+	overflow-y: auto;
+	display: block;
+}
+#header .profile h2{
+	font-size: 24px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 0;
+	color:#558ac0;
+	font-weight: 600;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+}
+#header .profile .social-links{
+	font-size: 18px;
+	display: block;
+	background: #212431;
+	color: #fff;
+	line-height: 1;
+	padding: 8px;
+	border-radius: 50px;
+	position: relative;
+	margin: 15px;
+}
+
+.main{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-wrap: wraap;
+}
+
+.nav-menu{
+	padding-top: 30px;
+}
+
+.nav-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav-menu > ul > li{
+	position: relative;
+	white-space: nowrap;
+	border-radius: 20px;
+}
+ .nav-menu a{
+	 display: flex;
+	 align-items: center;
+	 color: #6f7180;
+	 padding: 12px 15px;
+	 margin-bottom: 8px;
+	 transition: 0.3s;
+	 font-size: 15px;
+	 text-decoration: none; 
+  }
+.nav-menu a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+.nav-menu li:hover{
+	background-color: #149ddd;
+}
+
+.mobile-nav-toggle{
+	position: fixed;
+	right: 15px;
+	top: 15px;
+	z-index: 9998;
+	border: 0;
+	background: none;
+	font-size: 24px;
+	transition: all 0.4s;
+	line-height: 1;
+	cursor: pointer;
+	text-align: right;
+	background: #fff;
+}
+.mobile-nav-toggle i{
+	color: #149ddd;
+}
+#info{
+	width: 100%;
+	/*float: right;
+	right: 0;*/
+	height: 100vh;
+	background-size: cover;
+	position: relative;
+}
+.banner{
+	position: relative;
+	min-height: 90vh;
+	background-size: cover;
+	background: #fffaf4;
+	padding: 15px;
+}
+.banner img{
+	display: block;
+	float: right;
+}
+.banner h1{
+	font-weight: 1200;
+	font-size: 80px;
+	color: peru;	
+}
+.banner h3{
+	font-weight: 600;
+	font-size: 24px;
+	color: peru;
+	margin-top: 40px;
+}
+.about{
+	background-size: cover;
+	min-height: 90vh;
+	background: #1b1a24;
+	color: #7b7bcf;
+	padding: 15px;
+}
+.about h1{
+	font-weight: 1200;
+	font-size: 48px;
+	margin-bottom: 30px;
+}
+.about p{
+	font-size: 22px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.education{
+	background-size: cover;
+	background: #cbfffb;
+	min-height: 90vh;
+	color: #00b8aa;
+	padding: 15px;
+}
+.education h1{
+	font-weight: 1200;
+	font-size: 48px;
+	margin-bottom: 30px;
+}
+.eduinfo{
+	position: relative;
+	display: flex;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	height: auto;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #00bbab;
+	box-sizing: border-box;
+	border-radius: 15px;
+}
+.eduinfo img{
+	height: 80px;
+	width: 80px;
+	top: 50;
+	background-size: cover;
+	box-sizing: border-box;
+	border-radius: 50px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #fff;
+}
+.eduinfo p,ul{
+	font-size: 16px;
+	color: #cbfffb;
+	display: inline;
+}
+.skills{
+	position: relative;
+	margin: 0 auto;
+	padding: 15px;
+	min-height: 90vh;
+	height: auto;
+	background-size: cover;
+	background: #ffcecb;
+	color: #ff857e;
+}
+.skills h1{
+	font-weight: 1200;
+	font-size: 48px;
+	margin-bottom: 30px;
+}
+.toolbtn{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+.toolbtn button{
+	height: auto;
+	width: auto;
+	padding: 5px;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	background: #ff13a5;
+	color: rgb(255, 225, 225);
+	border-width: 0px;
+	outline: none important;
+	outline-width: 0 important;
+}
+.toolbtn button:focus{
+	outline: none important;
+	outline-width: 0 important;
+}
+.toolimg{
+	height: auto;
+	width: 100%;
+	/*padding-left: 20px;
+	 left: 50%;
+	margin: auto; */
+	display: flex;
+  justify-content: center;
+}
+.toolimg img{
+	height: 300px;
+	width: 300px;
+	position: absolute;
+}
+.projects{
+	padding-left: 15px;
+	min-height: 100vh;
+	background-size: cover;
+	background: rgb(211, 210, 210);
+}
+.projects h1{
+	font-weight: 1200;
+	font-size: 48px;
+	margin-bottom: 30px;
+}
+.projects button{
+	height: auto;
+	width: auto;
+	padding: 10px;
+	margin-right: 10px;
+	box-sizing: border-box;
+	border-radius: 20px;
+	background: #dbc1c1;
+	color: #fd5454;
+	font-weight: 600;
+	border-width: 0px;
+	outline: none important;
+	outline-width: 0 important;
+}
+.projects button:hover{
+	outline: none important;
+	outline-width: 0 important;
+}
+.carousel{
+	width: 90%;
+	position: absolute;
+	margin-top: 10px;
+	height: auto;
+}
+#webcarousel{
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	display: flex;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+#iotcarousel{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	display: flex;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+#photocarousel{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	display: flex;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+.projectcard{
+	margin: 20px;
+	margin-bottom: 20px;
+	height: auto;
+	min-width: 300px;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #dbc1c1;
+	box-sizing: border-box;
+	border-radius: 15px;
+	color: #808000;
+}
+.projectcard ul{
+	color: #808000;
+	list-style-type: none;
+}
+.contact{
+	height: auto;
+	padding: 15px;
+	background-color: #040b14;
+	color: #fff;
+	padding-bottom: 20px;
+}
+.contact h1{
+	font-weight: 1200;
+	font-size: 48px;
+	margin-bottom: 30px;
+}
+.contact button{
+	font-size: 16px;
+	height: 80px;
+	width: 80px;
+	background-color: transparent;
+	box-sizing: border-box;
+	border-radius: 50px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #fff;
+	margin-bottom: 20px;
+	cursor: pointer;
+	margin-right: 10px;
+	outline: none important;
+	outline-width: 0 important;
+}
+.contact button:focus{
+	outline: none important;
+	outline-width: 0 important;
+}
+.contact i,.contact font{
+	color: #fff;
+}
