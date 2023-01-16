@@ -31,7 +31,7 @@ function updateTime() {
         month: "2-digit",
         day: "numeric"
     };
-  var currentDate = new Date().toLocaleDateString("en",options);
+  var currentDate = new Date().toLocaleDateString("en-GB",options);
   document.getElementById("date").innerHTML = currentDate;
   document.getElementById("time").innerHTML = currentTime;
 }
