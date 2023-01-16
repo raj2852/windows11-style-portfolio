@@ -25,7 +25,13 @@ start.addEventListener("click", ()=>{
 
 function updateTime() {
   var currentTime = new Date().toLocaleTimeString();
-  var currentDate = new Date().toLocaleDateString();
+  var options = {
+        weekday: "short",
+        year: "numeric",
+        month: "2-digit",
+        day: "numeric"
+    };
+  var currentDate = new Date().toLocaleDateString("en",options);
   document.getElementById("date").innerHTML = currentDate;
   document.getElementById("time").innerHTML = currentTime;
 }
